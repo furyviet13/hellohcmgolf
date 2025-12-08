@@ -1,0 +1,133 @@
+/* ================================
+   REVIEW SECTION – CSS RIÊNG
+   ================================ */
+body {
+  font-family: 'NanumSquare', 'Nanum Gothic', sans-serif;
+}
+
+.review-section-simple {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px 18px;
+  background: #ffffff;
+  border-radius: 14px;
+  line-height: 1.75;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Tiêu đề chính */
+.review-section-simple h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1a1a1a;
+}
+
+/* Tiêu đề phụ */
+.review-section-simple h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  color: #222;
+}
+
+/* Đoạn văn */
+.review-section-simple p {
+  margin-bottom: 14px;
+}
+
+/* Danh sách */
+.review-section-simple ul {
+  margin: 8px 0 18px 20px;
+}
+
+.review-section-simple ul li {
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+/* Gạch ngăn */
+.review-section-simple hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 24px 0;
+}
+
+/* Ảnh trong bài */
+.review-section-simple .review-img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  margin: 14px 0 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Bảng tổng kết (nếu dùng sau này) */
+.review-section-simple table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.review-section-simple table th,
+.review-section-simple table td {
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+}
+
+.review-section-simple table th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .review-section-simple {
+    margin: 30px 10px;
+    padding: 16px 14px;
+    font-size: 15px;
+  }
+
+  .review-section-simple h2 {
+    font-size: 22px;
+  }
+
+  .review-section-simple h3 {
+    font-size: 18px;
+  }
+
+  .review-section-simple .review-img {
+    margin: 12px 0 16px;
+  }
+}
+
+/* ============================
+   BUTTON QUAY VỀ HOME
+   ============================ */
+
+.back-home-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-home-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-bottom: 20px;
+  background: #007e30ea;        /* Xanh nhẹ phong cách Hàn */
+  color: #fff !important;     /* Màu chữ trắng */
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none !important;
+  transition: 0.25s ease;
+}
+
+.back-home-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,566 @@
+:root {
+  --bg: #ffffff;
+  --text: #1b1b1b;
+  --green: #0f8b4b;
+  --lightgreen: #33cc66;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f2f2f2;
+  --green: #1dbf73;
+  --lightgreen: #4ade80;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'NanumSquare', 'Nanum Gothic', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--green);
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* logo trái, icon phải */
+  align-items: center;
+  padding: 0 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Logo bên trái */
+.logo {
+  text-decoration: none !important;  /* Xóa gạch chân */
+  color: inherit !important;         /* Giữ nguyên màu chữ hiện tại */
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Icon bên phải */
+.icon-link img {
+  width: 100px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.icon-link:hover img {
+  transform: scale(1.1);
+}
+
+/* Để nội dung không bị che */
+body {
+  padding-top: 70px;
+}
+
+/* =========================
+   BANNER RESPONSIVE
+   ========================= */
+/* ========== BANNER GIỮ CHUẨN TỶ LỆ 12:5 ========== */
+/* ========== BANNER CHUẨN 12:5 KHÔNG DƯ KHOẢNG TRẮNG ========== */
+/* =========================
+   BANNER GIỮ ĐÚNG TỈ LỆ 12:5
+   ========================= */
+/* === BANNER SCALE NGUYÊN TỶ LỆ 1200x500 === */
+/* ========== BANNER FULL WIDTH, SCALE TỶ LỆ 12:5 ========== */
+.banner {
+  position: relative;
+  width: 100%;                     /* luôn full chiều ngang màn hình */
+  height: calc(100vw * 5 / 12);    /* chiều cao tự scale đúng tỉ lệ 1200x500 */
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* từng slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;          /* phủ kín, không méo */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Giới hạn chiều cao tối đa ở desktop */
+@media (min-width: 1200px) {
+  .banner {
+    height: 500px; /* đúng kích thước gốc */
+  }
+}
+
+
+
+
+/* Location */
+.location {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.location h2 {
+  font-size: 1.8rem;
+  color: var(--green);
+  margin-bottom: 25px;
+}
+
+.filter {
+  position: relative;
+  z-index: 10;
+}
+
+
+.loc-btn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 2px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loc-btn.active,
+.loc-btn:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Golf List */
+.golf-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 40px 60px;
+}
+
+.golf-card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 3px 10px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.golf-card:hover {
+  transform: translateY(-6px);
+}
+
+.golf-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.golf-card h3 {
+  margin: 15px 0;
+  color: var(--green);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* =========================
+   NEWS SECTION
+   ========================= */
+.news {
+  padding: 70px 20px;
+  background: #f7f7f7;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--green);
+  margin-bottom: 40px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 15px 15px 10px;
+}
+
+.news-desc {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0 15px 20px;
+  line-height: 1.45;
+}
+
+
+/* =============================
+   CONTACT SECTION
+   ============================= */
+.contact {
+  text-align: center;
+  padding: 70px 20px;
+  background: var(--green);
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 350px;   /* ảnh tối đa 350px, tùy bạn chỉnh */
+  height: auto;       /* QUAN TRỌNG: giữ đúng tỉ lệ gốc */
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  object-fit: contain;  /* đảm bảo không méo trong mọi trường hợp */
+}
+
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 10px;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-image img {
+    width: 90%;             /* gần full màn hình */
+    max-width: 320px;       /* không vượt quá khung nhỏ */
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #0d703f;
+  color: #fff;
+  padding: 25px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner { height: 60vh; }
+  .golf-card { width: 90%; }
+  .contact-image img { height: 45vh; }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 60px;
+}
+
+.pagination button {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--lightgreen);
+  transform: translateY(-2px);
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#pageInfo {
+  font-weight: 600;
+  color: var(--green);
+}
+
+
+/* POPUP OVERLAY */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+body.popup-open {
+  overflow: hidden !important;
+}
+
+/* POPUP BOX */
+.popup-content {
+  background: #fff;
+  width: 95%;
+  max-width: 450px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn .3s ease;
+}
+
+.slider-title {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* SLIDER AREA */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* SLIDER BUTTONS */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* DOT NAVIGATION */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--green);
+}
+
+.close-popup {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.popup-desc {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+
+
+
+/* =========================
+   NEWS SECTION (BLOG / TIN TỨC)
+========================= */
+.news {
+  padding: 70px 20px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 40px;
+}
+
+/* GRID DANH SÁCH TIN TỨC */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD TIN TỨC */
+.news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* HÌNH */
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+/* TIÊU ĐỀ */
+.news-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin: 15px 15px 8px;
+  line-height: 1.3;
+}
+
+/* MÔ TẢ */
+.news-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 15px 20px;
+  line-height: 1.45;
+}
+
+/* LINK */
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .news-card img {
+    height: 150px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+.popup-link-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #009a4e;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.popup-link-btn:hover {
+  background: #00753b;
+}
+
+.popup-detail-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: #ffffff;
+  color: #009a4e;
+  border: 2px solid #009a4e;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.popup-detail-btn:hover {
+  background: #009a4e;
+  color: #fff;
+}
+
+
