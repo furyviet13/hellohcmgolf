@@ -25,8 +25,8 @@ const newsData = [
   },
   {
     img: "picter/blog_bai_viet/thum/02.JPG",
-    title: "Ưu đãi đặc biệt cho khách Hàn Quốc",
-    desc: "Các chương trình giảm giá cuối tuần, giờ vàng.",
+    title: "베트남에서 꼭 가봐야 할 추천 골프장",
+    desc: "코스 품질이 우수한 베트남 골프장들을 엄선해 소개합니다.",
     link: "blog_4"
   }
 

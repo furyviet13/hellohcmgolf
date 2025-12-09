@@ -138,15 +138,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("popup-open");
     }
   });
-
+ 
+  
   // --- DANH SÁCH HÌNH ---
   const golfImages = {
     "투득cc": [
-      "picter/golf-hcm/thuduc/1.JPG",
-      "picter/golf-hcm/thuduc/2.JPG",
-      "picter/golf-hcm/thuduc/3.JPG",
-      "picter/golf-hcm/thuduc/4.PNG",
-      "picter/golf-hcm/thuduc/5.JPG"
+      "picter/golf-hcm/thuduc/1.jpg",
+      "picter/golf-hcm/thuduc/2.jpg",
+      "picter/golf-hcm/thuduc/3.jpg",
+      "picter/golf-hcm/thuduc/4.png",
+      "picter/golf-hcm/thuduc/5.jpg"
     ],
 
     "탄손넛 cc": [
