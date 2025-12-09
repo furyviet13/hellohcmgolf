@@ -20,16 +20,15 @@ const newsData = [
     img: "picter/blog_bai_viet/thum/bv3.PNG",
     title: "한국 골퍼가 사랑하는 베트남 골프장 – 코스 리뷰 & 그린피 안내",
     desc: "베트남 인기 골프장의 코스 특징과 그린피를 한눈에 확인하세요.",
-    link: "blog_3"
+    link: "blog_3.html"
 
   },
   {
     img: "picter/blog_bai_viet/thum/02.JPG",
     title: "베트남에서 꼭 가봐야 할 추천 골프장",
     desc: "코스 품질이 우수한 베트남 골프장들을 엄선해 소개합니다.",
-    link: "blog_4"
+    link: "blog_4.html"
   }
-
 
 
 
