@@ -4,27 +4,27 @@
 
 const newsData = [
   {
-    img: "picter/blog_bai_viet/thum/05.jpg",
+    img: "/picter/blog_bai_viet/thum/05.jpg",
     title: "호치민에서 공항과 가장 가까운 골프장",
     desc: "탄손넛 골프장의 티타임 요금 및 베트남·한국 고객 전용 프로모션 업데이트.",
     link: "blog_1.html"
   },
   {
-    img: "picter/blog_bai_viet/thum/01.jpg",
+    img: "/picter/blog_bai_viet/thum/01.jpg",
     title: "베트남 골프 여행 필수 코스! 각 골프장 특징·요금·예약 정보 총정리",
     desc: "베트남 남부의 인기 골프장을 한눈에 확인하세요. 각 코스의 특징, 티타임 요금, 예약 방법까지 모든 정보를 쉽게 정리했습니다.",
     link: "blog_2.html"
 
   },
   {
-    img: "picter/blog_bai_viet/thum/bv3.png",
+    img: "/picter/blog_bai_viet/thum/bv3.png",
     title: "한국 골퍼가 사랑하는 베트남 골프장 – 코스 리뷰 & 그린피 안내",
     desc: "베트남 인기 골프장의 코스 특징과 그린피를 한눈에 확인하세요.",
     link: "blog_3.html"
 
   },
   {
-    img: "picter/blog_bai_viet/thum/02.jpg",
+    img: "/picter/blog_bai_viet/thum/02.jpg",
     title: "베트남에서 꼭 가봐야 할 추천 골프장",
     desc: "코스 품질이 우수한 베트남 골프장들을 엄선해 소개합니다.",
     link: "blog_4.html"
