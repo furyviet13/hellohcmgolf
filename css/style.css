@@ -111,9 +111,9 @@ body {
 }
 
 /* Giới hạn chiều cao tối đa ở desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1920px) {
   .banner {
-    height: 500px; /* đúng kích thước gốc */
+    height: 800px; /* đúng kích thước gốc */
   }
 }
 
