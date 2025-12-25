@@ -1,69 +1,105 @@
 // =======================
-// NEWS RANDOM (Tin tức ngẫu nhiên)
+// NEWS DATA (DÙNG CHUNG)
 // =======================
-
 const newsData = [
   {
     img: "/picter/blog_bai_viet/thum/05.jpg",
-    title: "호치민에서 공항과 가장 가까운 골프장",
+    title: "탄손낫 골프장 리뷰 – 호치민에서 가장 인기 많은 베트남 골프장",
     desc: "탄손넛 골프장의 티타임 요금 및 베트남·한국 고객 전용 프로모션 업데이트.",
     link: "blog_1.html"
   },
   {
     img: "/picter/blog_bai_viet/thum/01.jpg",
     title: "베트남 골프 여행 필수 코스! 각 골프장 특징·요금·예약 정보 총정리",
-    desc: "베트남 남부의 인기 골프장을 한눈에 확인하세요. 각 코스의 특징, 티타임 요금, 예약 방법까지 모든 정보를 쉽게 정리했습니다.",
+    desc: "베트남 남부 인기 골프장 정리.",
     link: "blog_2.html"
-
   },
   {
     img: "/picter/blog_bai_viet/thum/bv3.png",
-    title: "한국 골퍼가 사랑하는 베트남 골프장 – 코스 리뷰 & 그린피 안내",
-    desc: "베트남 인기 골프장의 코스 특징과 그린피를 한눈에 확인하세요.",
+    title: "베트남에서 가장 아름다운 골프장 Top 5",
+    desc: "코스 리뷰 & 그린피 안내",
     link: "blog_3.html"
-
   },
   {
-    img: "/picter/blog_bai_viet/thum/02.jpg",
-    title: "베트남에서 꼭 가봐야 할 추천 골프장",
-    desc: "코스 품질이 우수한 베트남 골프장들을 엄선해 소개합니다.",
+    img: "/picter/blog_bai_viet/thum/04.jpg",
+    title: "베트남에서 꼭 가봐야 할 추천 골프장 3선 – 코스 품질 & 플레이 후기",
+    desc: "코스 리뷰 & 그린피 안내",
+    link: "blog_5.html"
+  },
+  {
+    img: "/picter/blog_bai_viet/blog_5/1.jpg",
+    title: "베트남 호치민 골프 여행 완벽 가이드 | 신짜오베트남골프",
+    desc: "코스 리뷰 & 그린피 안내",
+    link: "blog_6.html"
+  },
+
+
+
+
+
+
+  {
+    img: "/picter/blog_bai_viet/blog_6/1.jpg",
+    title: "베트남 골프 여행의 매력과 즐기는 방법",
+    desc: "꼭 가봐야 할 골프장",
     link: "blog_4.html"
   }
-
-
-
 ];
 
-// Hàm random mảng
+// =======================
+// HELPER
+// =======================
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-// Render Tin tức ngẫu nhiên (Giới hạn 3 bài)
-function renderRandomNews() {
-  const shuffled = shuffle([...newsData]); // random danh sách
-  const limit = shuffled.slice(0, 3);      // chỉ lấy 3 bài đầu
+// =======================
+// TRANG CHỦ – RANDOM 3 BÀI
+// =======================
+function renderRandomNews(limitCount = 3) {
   const newsList = document.getElementById("newsList");
-
   if (!newsList) return;
 
+  const shuffled = shuffle([...newsData]).slice(0, limitCount);
   newsList.innerHTML = "";
 
-  limit.forEach(item => {
-    newsList.innerHTML += `
-      <article class="news-card">
-        <a href="${item.link}" class="news-link">
-          <img src="${item.img}" alt="${item.title}" />
-          <h3 class="news-title">${item.title}</h3>
-          <p class="news-desc">${item.desc}</p>
-        </a>
-      </article>
-    `;
+  shuffled.forEach(item => {
+    newsList.innerHTML += newsCardTemplate(item);
   });
 }
 
-// chạy khi load trang
-document.addEventListener("DOMContentLoaded", renderRandomNews);
+// =======================
+// BLOG.HTML – FULL BÀI
+// =======================
+function renderAllNews() {
+  const blogList = document.getElementById("blogList");
+  if (!blogList) return;
 
+  blogList.innerHTML = "";
+  newsData.forEach(item => {
+    blogList.innerHTML += newsCardTemplate(item);
+  });
+}
 
+// =======================
+// CARD TEMPLATE (DÙNG CHUNG)
+// =======================
+function newsCardTemplate(item) {
+  return `
+    <article class="news-card">
+      <a href="${item.link}" class="news-link">
+        <img src="${item.img}" alt="${item.title}">
+        <h3 class="news-title">${item.title}</h3>
+        <p class="news-desc">${item.desc}</p>
+      </a>
+    </article>
+  `;
+}
 
+// =======================
+// AUTO RUN
+// =======================
+document.addEventListener("DOMContentLoaded", () => {
+  renderRandomNews();   // index.html
+  renderAllNews();      // blog.html (nếu tồn tại)
+});

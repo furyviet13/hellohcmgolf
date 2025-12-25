@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const locButtons = document.querySelectorAll(".loc-btn");
   const golfCards = Array.from(document.querySelectorAll(".golf-card"));
-  const cardsPerPage = 10;
+  const cardsPerPage = 20;
 
   let currentPage = 1;
   let filteredCards = [...golfCards];
@@ -205,6 +205,30 @@ document.addEventListener("DOMContentLoaded", () => {
       "picter/golf-hcm/hamony/4.jpg",
       "picter/golf-hcm/hamony/5.jpg"
     ],
+
+    "달랏 팰리스 골프장": [
+      "picter/golf-hcm/Dalat Palace Golf Club/1.jpg",
+      "picter/golf-hcm/Dalat Palace Golf Club/2.jpeg",
+      "picter/golf-hcm/Dalat Palace Golf Club/3.jpg",
+      "picter/golf-hcm/Dalat Palace Golf Club/4.jpg",
+      "picter/golf-hcm/Dalat Palace Golf Club/5.jpg"
+    ],
+
+    "더 블러프스 호짬 골프장": [
+      "picter/golf-hcm/ho_tram/1.jpg",
+      "picter/golf-hcm/ho_tram/2.jpg",
+      "picter/golf-hcm/ho_tram/3.jpg",
+      "picter/golf-hcm/ho_tram/4.jpg",
+      "picter/golf-hcm/ho_tram/5.jpg"
+    ],
+
+    "파라다이스 골프 & 리조트": [
+      "picter/golf-hcm/ho_tram/1.jpg",
+      "picter/golf-hcm/ho_tram/2.jpg",
+      "picter/golf-hcm/ho_tram/3.jpg",
+      "picter/golf-hcm/ho_tram/4.jpg",
+      "picter/golf-hcm/ho_tram/5.jpg"
+    ],
     
     "빈펄 레만": [
       "picter/golf-hcm/vinperd/1.jpg",
@@ -233,7 +257,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   "하모니cc": "하모니CC는 빈즈엉 지역의 고급 18홀 프리미엄 코스로, 빠른 그린 속도와 정교하게 설계된 코스 레이아웃이 특징입니다. 클럽하우스 시설 또한 호텔급으로 평가되며, 중·상급 골퍼들에게 특히 높은 만족도를 제공합니다.",
 
+  "달랏 팰리스 골프장": "달랏 팰리스 골프 클럽은 베트남 달랏 도심에 위치한 전통 있는 18홀 골프장으로, 프랑스 식민 시대의 역사와 아름다운 고원 자연 경관이 조화를 이루는 명문 코스입니다. 온화한 기후와 전략적인 코스 설계로 여유롭고 품격 있는 라운딩을 원하는 골퍼들에게 최적의 선택입니다.",
+
+  "더 블러프스 호짬 골프장": "달랏 팰리스 골프 클럽은 베트남 달랏 도심에 위치한 전통 있는 18홀 골프장으로, 프랑스 식민 시대의 역사와 아름다운 고원 자연 경관이 조화를 이루는 명문 코스입니다. 온화한 기후와 전략적인 코스 설계로 여유롭고 품격 있는 라운딩을 원하는 골퍼들에게 최적의 선택입니다.",
+  
   "빈펄 레만": "빈펄 레만 골프 클럽은 Vinpearl 브랜드가 운영하는 자연형 18홀 골프장으로, 리조트와 함께 구성된 편리한 환경과 완벽한 코스 관리가 돋보입니다. 휴양과 골프를 동시에 즐기고 싶은 골퍼들에게 최적의 선택입니다."
+
 };
 
 
@@ -247,21 +276,29 @@ document.addEventListener("DOMContentLoaded", () => {
   "송베 골프 리조트": "http://pf.kakao.com/_xdBALn/chat",
   "동나이 골프 리조트": "http://pf.kakao.com/_xdBALn/chat",
   "하모니cc": "http://pf.kakao.com/_xdBALn/chat",
+  "더 블러프스 호짬 골프장": "http://pf.kakao.com/_xdBALn/chat",
+  "달랏 팰리스 골프장": "http://pf.kakao.com/_xdBALn/chat",
   "빈펄 레만": "http://pf.kakao.com/_xdBALn/chat"
 };
 
 
   // --- LINK XEM CHI TIẾT ---
 const golfDetailLinks = {
-  "탄손넛 cc": "tan_son_nhat.html",
-  "투득cc": "thu_duc.html",
-  "태광정산cc": "Taekwang.html",
-  "롱탄cc": "longthanh.html",
-  "트윈도브cc": "Twin_Doves.html",
-  "송베 골프 리조트": "song_be.html",
-  "동나이 골프 리조트": "dong_nai.html",
-  "하모니cc": "harmony.html",
-  "빈펄 레만": "Vinperd_Lemmon.html"
+   // --- miền nam ---
+  "탄손넛 cc": "/san_golf/mien_nam/tan_son_nhat.html",
+  "투득cc": "/san_golf/mien_nam/thu_duc.html",
+  "태광정산cc": "/san_golf/mien_nam/Taekwang.html",
+  "롱탄cc": "/san_golf/mien_nam/longthanh.html",
+  "트윈도브cc": "/san_golf/mien_nam/Twin_Doves.html",
+  "송베 골프 리조트": "/san_golf/mien_nam/song_be.html",
+  "동나이 골프 리조트": "/san_golf/mien_nam/dong_nai.html",
+  "하모니cc": "/san_golf/mien_nam/harmony.html",
+  "더 블러프스 호짬 골프장": "/san_golf/mien_nam/Dalat_Palace_Golf_Club.html",
+  "달랏 팰리스 골프장": "/san_golf/mien_nam/ho_tram.html",
+
+
+   // --- miền vinpearl ---
+  "빈펄 레만": "/san_golf/VINPEARL/Vinperd_Lemmon.html"
 };
 
 

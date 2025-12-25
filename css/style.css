@@ -571,3 +571,29 @@ body.popup-open {
 
 
 
+/* =========================
+   NEWS - VIEW ALL BUTTON
+========================= */
+.news-more-wrap {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.news-more-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background: var(--green);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.news-more-btn:hover {
+  background: var(--lightgreen);
+  transform: translateY(-2px);
+}
