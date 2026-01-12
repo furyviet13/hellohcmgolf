@@ -6,31 +6,31 @@ const newsData = [
     img: "/picter/blog_bai_viet/thum/05.jpg",
     title: "탄손낫 골프장 리뷰 – 호치민에서 가장 인기 많은 베트남 골프장",
     desc: "탄손넛 골프장의 티타임 요금 및 베트남·한국 고객 전용 프로모션 업데이트.",
-    link: "blog_1.html"
+    link: "/blog/blog_1.html"
   },
   {
     img: "/picter/blog_bai_viet/thum/01.jpg",
     title: "베트남 골프 여행 필수 코스! 각 골프장 특징·요금·예약 정보 총정리",
     desc: "베트남 남부 인기 골프장 정리.",
-    link: "blog_2.html"
+    link: "/blog/blog_2.html"
   },
   {
     img: "/picter/blog_bai_viet/thum/bv3.png",
     title: "베트남에서 가장 아름다운 골프장 Top 5",
     desc: "코스 리뷰 & 그린피 안내",
-    link: "blog_3.html"
+    link: "/blog/blog_3.html"
   },
   {
     img: "/picter/blog_bai_viet/thum/04.jpg",
     title: "베트남에서 꼭 가봐야 할 추천 골프장 3선 – 코스 품질 & 플레이 후기",
     desc: "코스 리뷰 & 그린피 안내",
-    link: "blog_5.html"
+    link: "/blog/blog_5.html"
   },
   {
     img: "/picter/blog_bai_viet/blog_5/1.jpg",
     title: "베트남 호치민 골프 여행 완벽 가이드 | 신짜오베트남골프",
     desc: "코스 리뷰 & 그린피 안내",
-    link: "blog_6.html"
+    link: "/blog/blog_6.html"
   },
 
 
@@ -42,7 +42,7 @@ const newsData = [
     img: "/picter/blog_bai_viet/blog_6/1.jpg",
     title: "베트남 골프 여행의 매력과 즐기는 방법",
     desc: "꼭 가봐야 할 골프장",
-    link: "blog_4.html"
+    link: "/blog/blog_4.html"
   }
 ];
 
